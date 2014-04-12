@@ -1,13 +1,26 @@
 apply plugin: 'idea'
 apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+group 'com.github.kevints.jompactor'
+version '0.1.0-SNAPSHOT'
 
 repositories {
- mavenCentral()
+  mavenCentral()
 }
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
   compile 'com.google.guava:guava:16.0'
+  compile 'com.google.protobuf:protobuf-java:2.4.1'
 
   testCompile 'junit:junit:4.11'
+}
+
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      from components.java
+    }
+  }
 }
