@@ -12,7 +12,6 @@ repositories {
 // In this section you declare the dependencies for your production and test code
 dependencies {
   compile 'com.google.guava:guava:16.0'
-  compile 'com.google.protobuf:protobuf-java:2.4.1'
 
   testCompile 'junit:junit:4.11'
 }
